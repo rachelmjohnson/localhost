@@ -66,7 +66,7 @@ view: users {
     case: {
       when: {
         sql: ${state} in ('Washington','Oregon','Idaho','Montana',
-        'Wyoming','Colorado','Utah','Nevada','California') ;;
+        'Wyoming','Colorado','Utah','Nevada','California','Alaska','Hawaii') ;;
         label: "West"
       }
       when: {
@@ -75,19 +75,19 @@ view: users {
       }
       when: {
         sql: ${state} in ('North Dakota','South Dakota','Nebraska','Minnesota',
-        'Iowa','Missouri','Illinois','Michigan','Indiana','Ohio') ;;
+        'Iowa','Missouri','Illinois','Michigan','Indiana','Ohio','Kansas','Wisconsin') ;;
         label: "Midwest"
       }
       when: {
         sql: ${state} in ('Arkansas','Louisiana','Kentucky','Tennessee',
         'Mississippi','Alabama','Florida','Georgia','South Carolina',
-        'North Carolina','Virginia') ;;
+        'North Carolina','Virginia','West Virginia',) ;;
         label: "South"
       }
       when: {
         sql: ${state} in ('Maryland','Delaware','New Jersey','Pennsylvania',
-        'New York','Connecticut','Rhode Island','Masachusettes',
-        'Vermont','New Hampshire','Maine') ;;
+        'New York','Connecticut','Rhode Island','Massachusetts',
+        'Vermont','New Hampshire','Maine','District of Columbia') ;;
         label: "Northeast"
       } } }
 
