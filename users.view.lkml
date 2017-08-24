@@ -81,7 +81,7 @@ view: users {
       when: {
         sql: ${state} in ('Arkansas','Louisiana','Kentucky','Tennessee',
         'Mississippi','Alabama','Florida','Georgia','South Carolina',
-        'North Carolina','Virginia','West Virginia',) ;;
+        'North Carolina','Virginia','West Virginia') ;;
         label: "South"
       }
       when: {
