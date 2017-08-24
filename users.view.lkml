@@ -62,6 +62,35 @@ view: users {
     sql: ${TABLE}.state ;;
   }
 
+  dimension: region {
+    case: {
+      when: {
+        sql: ${state} in ('Washington','Oregon','Idaho','Montana',
+        'Wyoming','Colorado','Utah','Nevada','California') ;;
+        label: "West"
+      }
+      when: {
+        sql: ${state} in ('Arizona','New Mexico','Texas','Oklahoma') ;;
+        label: "Southwest"
+      }
+      when: {
+        sql: ${state} in ('North Dakota','South Dakota','Nebraska','Minnesota',
+        'Iowa','Missouri','Illinois','Michigan','Indiana','Ohio') ;;
+        label: "Midwest"
+      }
+      when: {
+        sql: ${state} in ('Arkansas','Louisiana','Kentucky','Tennessee',
+        'Mississippi','Alabama','Florida','Georgia','South Carolina',
+        'North Carolina','Virginia') ;;
+        label: "South"
+      }
+      when: {
+        sql: ${state} in ('Maryland','Delaware','New Jersey','Pennsylvania',
+        'New York','Connecticut','Rhode Island','Masachusettes',
+        'Vermont','New Hampshire','Maine') ;;
+        label: "Northeast"
+      } } }
+
   dimension: zip {
     type: zipcode
     sql: ${TABLE}.zip ;;
