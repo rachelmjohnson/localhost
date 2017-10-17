@@ -42,4 +42,15 @@ view: order_items {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]
   }
-}
+
+  measure: sum {
+    type: sum
+    sql: ${TABLE}.sale_price ;;
+  }
+
+  measure: sumd {
+    type: number
+    sql: sum(${TABLE}.sale_price) ;;
+  }
+
+  }
